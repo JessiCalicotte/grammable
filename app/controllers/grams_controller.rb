@@ -21,15 +21,12 @@ class GramsController < ApplicationController
 
     def show
         @gram = Gram.find_by_id(params[:id]) 
-        if @gram.blank?
-            return render_not_found if @gram.blank?
-        end
+        return render_not_found if @gram.blank?
     end
 
     def edit
         @gram = Gram.find_by_id(params[:id])
         return render_not_found if @gram.blank?
-        end
     end
 
     def create
@@ -51,4 +48,3 @@ class GramsController < ApplicationController
         render plain: 'Not Found :(', status: :not_found
     end
 end
-
