@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: 'grammable-jessi-calicotte.herokuapp.com' }
+ config.action_mailer.default_url_options = { host: 'localhost', port: 3030 }
 
 
   # Settings specified here will take precedence over those in config/application.rb.
