@@ -3,3 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 end
+def render_not_found(status=:not_found)
+  render plain: "#{status.to_s.titleize} :(", status: status
+end
